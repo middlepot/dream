@@ -72,6 +72,7 @@ position: absolute;
 	left: 230px;
 	top: 30px;
 	z-index:15;
+}
 </style>
 
 <script type="text/javascript">
@@ -228,6 +229,28 @@ function set_width() {
 </script>
 
 </head>
+
+<style>
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+@media screen and (max-width: 1000px) and (orientation: portrait){
+#everything { position: absolute; zoom: 140%;
+	left:630px;
+	top:-100px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+}
+@media screen and (max-width: 1000px) and (orientation: landscape){
+#everything { position: absolute; zoom: 80%; left:-60px; top:10px;}
+}
+</style>
+
+<div id="everything">
 
 <body style="background-image:url(https://i.imgur.com/oivxSTB.png); background-size: cover; background-repeat: no-repeat; background-color:#fefbfb; font-family: Calibri; font-size: 12px;">
 <body onkeydown="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status='..message perso .. '; return true;" style="overflow-y:hidden; overflow-x:hidden;">
