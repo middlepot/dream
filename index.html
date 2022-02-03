@@ -244,9 +244,27 @@ html {
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg); }
+#stuff { overflow-y:hidden; overflow-x:hidden; }
+}
+@media screen and (min-width: 1700px) and (orientation: landscape){
+#everything { position: absolute; zoom: 120%;
+	left:120px;
+	top:40px; }
+#stuff { overflow-y:hidden; overflow-x:hidden; }
+}
+@media screen and (min-width: 2000px) and (orientation: landscape){
+#everything { position: absolute; zoom: 100%;}
+#stuff { overflow-y:hidden; overflow-x:hidden; }
+}
+@media screen and (min-width: 3000px) and (orientation: landscape){
+#everything { position: absolute; zoom: 240%;
+	left:120px;
+	top:40px; }
+#stuff { overflow-y:hidden; overflow-x:hidden; }
 }
 @media screen and (max-width: 1000px) and (orientation: landscape){
 #everything { position: absolute; zoom: 80%; left:-60px; top:10px;}
+#stuff { overflow-y:hidden; overflow-x:hidden; }
 }
 </style>
 
