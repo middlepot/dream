@@ -78,6 +78,7 @@ html {
 @supports not (-webkit-touch-callout: none) {
 @media screen and (max-width: 1000px) and (orientation: portrait){
 body { position: relative; zoom: 140%; left:-100px; top:30px; background-repeat: repeat;}
+marquee { width:190%; }
 }
 }
 
@@ -85,24 +86,28 @@ body { position: relative; zoom: 140%; left:-100px; top:30px; background-repeat:
 @media screen and (max-width: 1000px) and (orientation: portrait){
 body { position: relative; zoom: 140%; left:-100px; top:30px; background-repeat: repeat;}
 html{-webkit-text-size-adjust: 135%; text-size-adjust: 135%;}
+marquee { width:190%; }
 }
 }
 
 @media screen and (max-width: 1000px) and (orientation: landscape){
 body { position: relative; zoom: 80%; left:190px; top: 30px; background-repeat: repeat; }
+marquee { width:110%; }
 }
 
 @media screen and (min-width: 1700px) and (orientation: landscape){
-body { position: relative; zoom: 120%;
-	left:100px;
+body { position: relative; zoom: 170%;
+	left:220px;
 	top:5px; background-repeat: repeat;}
+marquee { width:140%; }
 }
 @media screen and (min-width: 2000px) and (orientation: landscape){
 body { position: relative; zoom: 100%;	left:-150px; background-repeat: repeat;}
+marquee { width:110%; }
 }
 @media screen and (min-width: 3000px) and (orientation: landscape){
-body { position: relative; zoom: 240%;
-	left:100px;
+body { position: relative; zoom: 270%;
+	left:300px;
 	top:5px; background-repeat: repeat; }
 }
 @media screen and (max-width: 1000px) and (orientation: landscape){
@@ -223,15 +228,15 @@ style="-o-transition:.5s;
 <img ondragstart="return false" style="position:absolute; left:605px; top:25px; z-index:5;" src="dollhouse2.png">
 
 
-<marquee behavior="scroll" direction="left" width="100%">
+<marquee behavior="scroll" direction="left" width="110%" scrollamount="5">
 <img ondragstart="return false" style="padding-top:130px; z-index:3;" src="cloud.png">
 </marquee>
 
-<marquee behavior="scroll" direction="right" width="100%">
+<marquee behavior="scroll" direction="right" width="110%" scrollamount="3">
 <img ondragstart="return false" style="padding-top:200px; z-index:0;" src="cloud.png">
 </marquee>
 
-<marquee behavior="scroll" direction="left" width="100%">
+<marquee behavior="scroll" direction="left" width="110%" scrollamount="8">
 <img ondragstart="return false" style="padding-top:300px; z-index:0;" src="cloud.png">
 </marquee>
 
