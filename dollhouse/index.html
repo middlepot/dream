@@ -116,11 +116,11 @@ body { position: relative; zoom: 80%; left:-100px; top:-20px; background-repeat:
 <body oncontextmenu="return false" style="background-image:url(toplace.png), url(bg.jpg); background-position: left top, left top; background-repeat: repeat-x, repeat; background-size: 280px, cover; background-color:#F7F2F2; font-family: Calibri; font-size: 13px; color:#998a82; overflow-x:hidden;">
 
 
-<img src="musicbox1.png"style="position:absolute; z-index:2; top:357px; left:596px; display: block;">
+<img src="musicbox1.png"style="position:absolute; z-index:10; top:357px; left:596px; display: block;">
 
 <script>function playa1(){document.getElementById("miniradio1-2").style.display = "block";document.getElementById("miniradio1").style.display = "none";} function pausea1(){document.getElementById("miniradio1").style.display = "block";document.getElementById("miniradio1-2").style.display = "none";}</script>
-<a><img onclick="audio1.play(); playa1();" id="miniradio1" src="musicbox2.png"style="position:absolute; z-index:2; top:262px; left:590px; display: block; -webkit-animation: linear infinite; -webkit-animation-name: rotate; -webkit-animation-duration: 10s;"></a>
-<a><img onclick="audio1.pause(); pausea1();" id="miniradio1-2" src="musicbox2.png"style="position:absolute; z-index:2; top:262px; left:590px; display: none; -webkit-animation: linear infinite; -webkit-animation-name: rotate; -webkit-animation-duration: 10s;"></a>
+<a><img onclick="audio1.play(); playa1();" id="miniradio1" src="musicbox2.png"style="position:absolute; z-index:10; top:262px; left:590px; display: block; -webkit-animation: linear infinite; -webkit-animation-name: rotate; -webkit-animation-duration: 10s;"></a>
+<a><img onclick="audio1.pause(); pausea1();" id="miniradio1-2" src="musicbox2.png"style="position:absolute; z-index:10; top:262px; left:590px; display: none; -webkit-animation: linear infinite; -webkit-animation-name: rotate; -webkit-animation-duration: 10s;"></a>
 <audio preload="true" autoplay loop id="audio1" src="castle%20on%20a%20cloud.mp3" type="audio/mpeg" loop></audio>
 
 <style>
@@ -218,58 +218,23 @@ style="-o-transition:.5s;
 
 <img ondragstart="return false" style="position:absolute; left:50px; top:1340px; z-index:-10;" src="bottom.png">
 
-<img ondragstart="return false" style="position:absolute; left:370px; top:20px; z-index:-5;" src="dollhouse1.png">
-<img ondragstart="return false" style="position:absolute; left:605px; top:25px; z-index:1;" src="dollhouse2.png">
-
-<img ondragstart="return false" style="position:absolute; left:0px; z-index:-2; -webkit-animation: linear infinite; -webkit-animation-name: cloud1; -webkit-animation-duration: 35s;" src="cloud.png">
-
-<style>
-@-webkit-keyframes cloud1 {
-    0% { left: 100%; top: 120px;}
-    50%{ left: -100%; top: 120px;}
-    60%{ left: -100%; top: 220px;}
-    90%{ left: 100%; top: 220px;}
-    100%{ left: 200%; top: 120px;}
-}
-</style>
-
-<img ondragstart="return false" style="position:absolute; left:0px; z-index:-8; -webkit-animation: linear infinite; -webkit-animation-name: cloud2; -webkit-animation-duration: 30s;" src="cloud.png">
-
-<style>
-@-webkit-keyframes cloud2 {
-    0% { left: -50%; top: 400px;}
-    50%{ left: 100%; top: 400px;}
-    60%{ left: 100%; top: 500px;}
-    90%{ left: -50%; top: 500px;}
-    100%{ left: -100%; top: 400px;}
-}
-</style>
+<img ondragstart="return false" style="position:absolute; left:370px; top:20px; z-index:0;" src="dollhouse1.png">
+<img ondragstart="return false" style="position:absolute; left:370px; top:392px; z-index:2;" src="dollhouse1-2.png">
+<img ondragstart="return false" style="position:absolute; left:605px; top:25px; z-index:5;" src="dollhouse2.png">
 
 
-<img ondragstart="return false" style="position:absolute; left:0px; z-index:-8; -webkit-animation: linear infinite; -webkit-animation-name: cloud3; -webkit-animation-duration: 50s;" src="cloud.png">
+<marquee behavior="scroll" direction="left">
+<img ondragstart="return false" style="padding-top:130px; z-index:3;" src="cloud.png">
+</marquee>
 
-<style>
-@-webkit-keyframes cloud3 {
-    0% { left: 200%; top: 530px;}
-    50%{ left: -200%; top: 530px;}
-    60%{ left: -200%; top: 630px;}
-    90%{ left: 200%; top: 630px;}
-    100%{ left: 300%; top: 530px;}
-}
-</style>
+<marquee behavior="scroll" direction="right">
+<img ondragstart="return false" style="padding-top:200px; z-index:0;" src="cloud.png">
+</marquee>
 
+<marquee behavior="scroll" direction="left">
+<img ondragstart="return false" style="padding-top:300px; z-index:0;" src="cloud.png">
+</marquee>
 
-<img ondragstart="return false" style="position:absolute; left:0px; z-index:-8; -webkit-animation: linear infinite; -webkit-animation-name: cloud4; -webkit-animation-duration: 60s;" src="cloud.png">
-
-<style>
-@-webkit-keyframes cloud4 {
-    0% { left: -150%; top: 750px;}
-    50%{ left: 250%; top: 750px;}
-    60%{ left: 250%; top: 850px;}
-    90%{ left: -150%; top: 850px;}
-    100%{ left: -250%; top: 750px;}
-}
-</style>
 
 <div style="z-index:12; position:absolute; top:1540px; left:930px; transform: rotate(-8deg); -webkit-transform: rotate(-8deg); width:200px; white-space: nowrap;">
 <a href="https://middlepot.com" target="_blank"><sup><font color="#fff" style="letter-spacing:1px;">© middlepot</font></sup></a>
