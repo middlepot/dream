@@ -54,14 +54,14 @@ html{
  ::-moz-selection {color:#cfc0c0;}
 
 ::-webkit-scrollbar {
-width: 4px;
+width: 7px;
 height: 4px;
 background: transparent;
 }
 ::-webkit-scrollbar-thumb {
 background-color: #fff;
 -webkit-border-radius: 0ex;
-border: 1px solid #ccbcbc;
+border: 1px solid #D6C5C5;
 }
 }
 </style>
@@ -75,25 +75,33 @@ html {
     text-size-adjust: 100%;
 }
 
+@supports not (-webkit-touch-callout: none) {
 @media screen and (max-width: 1000px) and (orientation: portrait){
-body { position: relative; zoom: 190%; left:-300px; top:0px; background-repeat: repeat;}
-html{-webkit-text-size-adjust: 105%; text-size-adjust: 105%; line-height:10px !important;}
+body { position: relative; zoom: 140%; left:-100px; top:30px; background-repeat: repeat;}
+}
+}
+
+@supports (-webkit-touch-callout: none) {
+@media screen and (max-width: 1000px) and (orientation: portrait){
+body { position: relative; zoom: 140%; left:-100px; top:30px; background-repeat: repeat;}
+html{-webkit-text-size-adjust: 135%; text-size-adjust: 135%;}
+}
 }
 
 @media screen and (max-width: 1000px) and (orientation: landscape){
-body { position: relative; zoom: 100%; left:150px; top: 10px; overflow: auto; overflow: scroll; background-repeat: repeat; }
+body { position: relative; zoom: 80%; left:190px; top: 30px; background-repeat: repeat; }
 }
 
 @media screen and (min-width: 1700px) and (orientation: landscape){
-body { position: absolute; zoom: 120%;
+body { position: relative; zoom: 120%;
 	left:100px;
 	top:5px; background-repeat: repeat;}
 }
 @media screen and (min-width: 2000px) and (orientation: landscape){
-body { position: absolute; zoom: 100%;	left:-150px; background-repeat: repeat;}
+body { position: relative; zoom: 100%;	left:-150px; background-repeat: repeat;}
 }
 @media screen and (min-width: 3000px) and (orientation: landscape){
-body { position: absolute; zoom: 240%;
+body { position: relative; zoom: 240%;
 	left:100px;
 	top:5px; background-repeat: repeat; }
 }
@@ -105,7 +113,7 @@ body { position: relative; zoom: 80%; left:-100px; top:-20px; background-repeat:
 <div id="everything">
 
 
-<body oncontextmenu="return false" style="background-image:url(toplace.png), url(bg.jpg); background-position: left top, left top; background-repeat: repeat-x, repeat; background-size: 280px, cover; background-color:#f1e7e5; font-family: Calibri; font-size: 13px; color:#998a82; overflow-x:hidden;">
+<body oncontextmenu="return false" style="background-image:url(toplace.png), url(bg.jpg); background-position: left top, left top; background-repeat: repeat-x, repeat; background-size: 280px, cover; background-color:#F7F2F2; font-family: Calibri; font-size: 13px; color:#998a82; overflow-x:hidden;">
 
 
 <img src="musicbox1.png"style="position:absolute; z-index:2; top:357px; left:596px; display: block;">
