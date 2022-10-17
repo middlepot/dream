@@ -333,14 +333,21 @@ style="-o-transition:.5s;
 </div>
 
 <style>
-.teddy:active {
+.teddy.love {
   cursor: url(cursorh.png), progress;
 }
 </style>
 
-<img oncontextmenu="return false" ondragstart="return false" class="teddy" id="teddy" onclick="audio1.play();" style="position:absolute; left:430px; top:30px; z-index:20; display:block;" src="teddy.png">
+<img oncontextmenu="return false" ondragstart="return false" class="teddy" id="teddy" style="position:absolute; left:430px; top:30px; z-index:20; display:block;" src="teddy.png">
 
 <audio preload="true" id="audio1" src="smooch.mp3" type="audio/mpeg"></audio>
+
+<script>
+$(".teddy").on("mousedown mouseup", function(e)
+{
+    $(".teddy").toggleClass("love");
+});
+</script>
 
 <script>
 	var displayH = $(window).height();
