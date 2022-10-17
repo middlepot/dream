@@ -113,7 +113,7 @@ function fill_the_jar() {
 	dvs.top='0px';
 	dvs.width='1px';
 	dvs.height='1px';
-	document.body.appendChild(div);
+	document.getElementById("everything").appendChild(div);
 	set_width();
 	for (i=0; i<blobs; i++) {
 	  add_blob(i);
@@ -283,7 +283,7 @@ html{-webkit-text-size-adjust: 135%; text-size-adjust: 135%;}
 
 <div id="everything">
 
-<body style="background-image:url(https://i.imgur.com/dbHlDiu.png); background-size: cover; background-repeat: no-repeat; background-color:#fefbfb; font-family: Calibri; font-size: 12px;">
+<body style="background-image:url(https://i.imgur.com/ztQNYm1.png); background-size: cover; background-repeat: no-repeat; background-color:#fefbfb; font-family: Calibri; font-size: 12px;">
 <body onkeydown="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status='..message perso .. '; return true;" style="overflow-y:hidden; overflow-x:hidden;">
 
 
@@ -462,7 +462,9 @@ a:hover{text-shadow: 0 0 8px #fff;color:#fff}
         '../comfort',
         '../float',
         '../index',
-        '../dollhouse'
+        '../dollhouse',
+        '../bath',
+        '../medicine'
     ];
 
     function randomSite() {
