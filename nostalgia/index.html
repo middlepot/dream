@@ -169,8 +169,8 @@ $('#everything').append('<img id="si'+i+'" src="'+rndPic+'" style="position:abso
 }
 $('#everything').append('</div></div>');
 }
-var WinHeight=650;//(ns||ns6)?window.innerHeight:window.document.body.clientHeight;
-var WinWidth=1280;//(ns||ns6)?window.innerWidth-70:window.document.body.clientWidth;
+var WinHeight=((ns||ns6)?window.innerHeight:window.document.body.clientHeight)-50;
+var WinWidth=((ns||ns6)?window.innerWidth-70:window.document.body.clientWidth)-50;
 for (i=0; i < Amount; i++){
  Ypos[i] = Math.round(Math.random()*WinHeight);
  Xpos[i] = Math.round(Math.random()*WinWidth);
