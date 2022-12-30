@@ -169,8 +169,8 @@ $('#everything').append('<img id="si'+i+'" src="'+rndPic+'" style="position:abso
 }
 $('#everything').append('</div></div>');
 }
-var WinHeight=650;//((ns||ns6)?window.innerHeight:window.document.body.clientHeight)-50;
-var WinWidth=1200;//((ns||ns6)?window.innerWidth-70:window.document.body.clientWidth)-50;
+var WinHeight=((ns||ns6)?window.innerHeight:window.document.body.clientHeight)-50;
+var WinWidth=((ns||ns6)?window.innerWidth-70:window.document.body.clientWidth)-50;
 for (i=0; i < Amount; i++){
  Ypos[i] = Math.round(Math.random()*WinHeight);
  Xpos[i] = Math.round(Math.random()*WinWidth);
@@ -181,6 +181,10 @@ for (i=0; i < Amount; i++){
 function fall(){
 //var WinHeight=(ns||ns6)?window.innerHeight:window.document.body.clientHeight;
 //var WinWidth=(ns||ns6)?window.innerWidth-70:window.document.body.clientWidth;
+var limitH = WinHeight;
+if(WinWidth < WinHeight){
+  limitH = WinWidth;
+}
 var hscrll=(ns||ns6)?window.pageYOffset:document.body.scrollTop;
 var wscrll=(ns||ns6)?window.pageXOffset:document.body.scrollLeft;
 for (i=0; i < Amount; i++){
@@ -188,8 +192,8 @@ sy = Speed[i]*Math.sin(30*Math.PI/180);
 sx = Speed[i]*Math.cos(Cstep[i]);
 Ypos[i]+=sy;
 Xpos[i]+=sx; 
-if (Ypos[i] > WinHeight){
-Ypos[i]=-60;
+if (Ypos[i] > limitH){
+Ypos[i]=0;
 Xpos[i]=Math.round(Math.random()*WinWidth);
 Speed[i]=Math.random()*5+3;
 }
