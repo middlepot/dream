@@ -241,18 +241,18 @@ function getBrushPos(xRef, yRef) {
 	var xRefScaling = getReversePercentage(xRef, zoom);
 	var yRefScaling = getReversePercentage(yRef, zoom);
 	//portrait
-	if(displayH > displayW){
+	/*if(displayH > displayW){
 		return {
 		  x: Math.floor((yRef*yRefScaling-woodRect.top)/(woodRect.bottom-woodRect.top)*wood.height),
 		  y: Math.floor((-xRef*xRefScaling+woodRect.left)/(woodRect.right-woodRect.left)*wood.width)
 		};
 	}
-	else{
+	else{*/
 		return {
 		  x: Math.floor((xRef*xRefScaling-woodRect.left)/(woodRect.right-woodRect.left)*wood.width),
 		  y: Math.floor((yRef*yRefScaling-woodRect.top)/(woodRect.bottom-woodRect.top)*wood.height)
 		};
-	}
+	//}
 }
       
 function drawDot(mouseX,mouseY){
