@@ -193,6 +193,10 @@ style="-o-transition:.5s;
 
 
 <script>
+var displayH = $(window).height();
+var displayW = $(window).width();
+var windowRatio = displayW/displayH;
+
 var wood = document.getElementById("wood"),
 woodCanvas = wood.getContext('2d'),
 brushRadius = (wood.width / 100) * 3,
@@ -222,12 +226,33 @@ function detectLeftButton(event) {
     }
 }
 
+function getReversePercentage(finalNum, percentage){
+	return (finalNum/percentage)/finalNum; //441/1.4 = 315 || 315/441 = 0.71
+}
+
+function getTransformedPoint(x, y) {
+  const originalPoint = new DOMPoint(x, y);
+  return woodCanvas.getTransform().invertSelf().transformPoint(originalPoint);
+}
+
 function getBrushPos(xRef, yRef) {
 	var woodRect = wood.getBoundingClientRect();
-    return {
-	  x: Math.floor((xRef-woodRect.left)/(woodRect.right-woodRect.left)*wood.width),
-	  y: Math.floor((yRef-woodRect.top)/(woodRect.bottom-woodRect.top)*wood.height)
-    };
+	var zoom = parseFloat(getComputedStyle(document.getElementById('everything'))?.zoom || 1);
+	var xRefScaling = getReversePercentage(xRef, zoom);
+	var yRefScaling = getReversePercentage(yRef, zoom);
+	//portrait
+	if(displayH > displayW){
+		return {
+		  x: Math.floor((yRef*yRefScaling-woodRect.top)/(woodRect.bottom-woodRect.top)*wood.height),
+		  y: Math.floor((-xRef*xRefScaling+woodRect.left)/(woodRect.right-woodRect.left)*wood.width)
+		};
+	}
+	else{
+		return {
+		  x: Math.floor((xRef*xRefScaling-woodRect.left)/(woodRect.right-woodRect.left)*wood.width),
+		  y: Math.floor((yRef*yRefScaling-woodRect.top)/(woodRect.bottom-woodRect.top)*wood.height)
+		};
+	}
 }
       
 function drawDot(mouseX,mouseY){
@@ -240,17 +265,17 @@ function drawDot(mouseX,mouseY){
 
 wood.addEventListener("mousemove", function(e) {
 	var brushPos = getBrushPos(e.clientX, e.clientY);
-  var leftBut = detectLeftButton(e);
-  if (leftBut == 1) {
+	var leftBut = detectLeftButton(e);
+	if (leftBut == 1) {
 		drawDot(brushPos.x, brushPos.y);
-  }
+	}
 }, false);
 
 wood.addEventListener("touchmove", function(e) {
     e.preventDefault();
     var touch = e.targetTouches[0];
     if (touch) {
-    var brushPos = getBrushPos(touch.pageX, touch.pageY);
+		var brushPos = getBrushPos(touch.clientX, touch.clientY);
         drawDot(brushPos.x, brushPos.y);
     }
 }, false);
