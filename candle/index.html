@@ -22,7 +22,7 @@
  　　　                '._  _.'
 -->
 
-<title>.. 𝗌𝗇𝗈𝗐𝗀𝗅𝗈𝖻𝖾</title>
+<title>.. 𝖼𝖺𝗇𝖽𝗅𝖾</title>
 
 <head>
 <link rel="shortcut icon" href="favicon.png">
@@ -174,8 +174,6 @@ html{-webkit-text-size-adjust: 145%; text-size-adjust: 145%;}
 
 <body oncontextmenu="return false" style="background-image:url(bg.jpg); background-repeat: repeat; background-size: cover; background-attachment: fixed;  background-color:#F7F2F2; font-family: Calibri; font-size: 13px; color:#998a82;"><img src="https://middlepot.com/img/dream.jpg" alt="dream.pooftie.me banner thumbnail preview main image" style="display:none">
 
-<img oncontextmenu="return false" ondragstart="return false" style="position:absolute; left:70px; top:230px; z-index:1;" src="teacups.png">
-<img oncontextmenu="return false" ondragstart="return false" style="position:absolute; left:900px; top:-50px; z-index:1;" src="light.png">
 
 <script>
     var sites = [
@@ -190,7 +188,7 @@ html{-webkit-text-size-adjust: 145%; text-size-adjust: 145%;}
         '../train',
         '../cuddles',
         '../patchwork',
-        '../candle',
+        '../snowglobe',
         '../paint'
     ];
 
@@ -209,72 +207,54 @@ style="-o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
-  transition:.5s; z-index:11; position:absolute; left:280px; top:25px;" width="150px" height="auto" src="https://i.imgur.com/uxMMaMd.png"></a>
+  transition:.5s; z-index:11; position:absolute; left:150px; top:305px;" width="130px" height="auto" src="https://i.imgur.com/uxMMaMd.png"></a>
 
 
-<div id="signature" style="z-index:12; position:absolute; top:505px; left:210px; transform: rotate(-15deg); -webkit-transform: rotate(-15deg); width:200px; white-space: nowrap;">
+<div id="signature" style="z-index:12; position:absolute; top:555px; left:820px; transform: rotate(-15deg); -webkit-transform: rotate(-15deg); width:200px; white-space: nowrap;">
 <a href="https://middlepot.com" target="_blank" style="text-decoration: none; border-bottom:1px solid #fff; padding-bottom: 0px;"><sup><font color="#fff" style="font-size:9px; letter-spacing:1px;">© middlepot</font></sup></a>
 </div>
 
 
-<style>
-.floating {
-    -webkit-animation-name: Floatingx;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: Floating;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
-}
-@-webkit-keyframes Floatingx {
-    from {-webkit-transform:translate(0, 0px);}
-    40% {-webkit-transform:translate(0, 50px);}
-    to {-webkit-transform: translate(0, -0px);}    
-}
-
-@-moz-keyframes Floating {
-    from {-moz-transform:translate(0, 0px);}
-    40% {-moz-transform:translate(0, 50px);}
-    to {-moz-transform: translate(0, -0px);}    
-}
-.visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1s linear;
-}
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 1s, opacity 1s linear;
-}
-</style>
-
 <script>
-function moveglobe(event){
-  document.getElementById("snowgif").classList.remove('hidden');
-  document.getElementById("snowgif").classList.add('visible');
-  document.getElementById("snowglobe").classList.add('floating');
-  document.getElementById("blank").style.zIndex = '7';
-  document.getElementById("snowglobe").style.animationPlayState = 'running';
-}
-function stopglobe(){
-  document.getElementById("snowgif").classList.remove('visible');
-  document.getElementById("snowgif").classList.add('hidden');
-  document.getElementById("blank").style.zIndex = '2';
-  document.getElementById("snowglobe").style.animationPlayState = 'paused';
+function lightcandle(){
+document.getElementById("candle1").style.display = "none";
+document.getElementById("candle2").style.display = "block";
+document.getElementById("blank2").style.display = "block";
+document.getElementById("blank1").style.display = "none";
 }
 </script>
 
-<img id="blank" oncontextmenu="return false" ondragstart="return false" onclick="stopglobe();" style="position:absolute; left:0px; top:0px; z-index:2;" src="blank.png">
+<img id="blank1" oncontextmenu="return false" ondragstart="return false" style="position:absolute; left:0px; top:0px; z-index:2; display:block;" src="blank.png">
+
+<a><img id="blank2" oncontextmenu="return false" ondragstart="return false" style="position:absolute; left:0px; top:0px; z-index:2; display:none;" src="blank.png"></a>
 
 
-<div id="snowglobe" onclick="moveglobe();" style="position:absolute; left: 485px; top: 60px; z-index:3;">
-<a><img oncontextmenu="return false" ondragstart="return false" style="position:absolute; z-index:4;" src="back.png"></a>
-<a><img id="snowgif" class="hidden" oncontextmenu="return false" ondragstart="return false" style="position:absolute; z-index:5; width:400px; height:400px; filter: blur(0.7px); padding-top:7px; padding-left:-7px;" src="snowgif.gif"></a>
-<a><img oncontextmenu="return false" ondragstart="return false" style="position:absolute; z-index:6;" src="front.png"></a>
-</div>
+<img id="candle1" onclick="lightcandle(); audio1.play();" oncontextmenu="return false" ondragstart="return false" style="position:absolute; z-index:4; display:block; left:500px; top:15px;" src="candle1.png">
+
+<a><img id="candle2" oncontextmenu="return false" ondragstart="return false" style="position:absolute; z-index:4; display:none; left:500px; top:15px;" src="candle2.png"></a>
+
+        <script type = "text/javascript">
+            var imagecandle2 = document.getElementById("candle2");
+            var currentPoscandle2 = 0;
+            var imagescandle2 = ["candle2.png", "candle3.png", "candle4.png", "candle5.png"]
+            var crtPreload = [];
+            imagescandle2.forEach(img =>{
+                var el = new Image();
+                el.src = img;
+                crtPreload.push(el);
+            });
+            function volgendefotocandle2() {
+                if (++currentPoscandle2 >= imagescandle2.length)
+                    currentPoscandle2 = 0;
+
+                imagecandle2.src = imagescandle2[currentPoscandle2];
+            }
+
+            setInterval(volgendefotocandle2, 500);
+        </script>
+
+<audio id="audio1" src="wick.mp3" type="audio/mpeg" loop></audio>
+
 
 </body>
 </div>
