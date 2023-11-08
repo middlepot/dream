@@ -257,7 +257,7 @@ style="-o-transition:.5s;
   top: 79px;
   left: 50%;
   margin-left: -2px;
-  transform-origin: -30% 80px;
+  transform-origin: 50% 80px;
 }
 
 .minute-hand {
@@ -269,7 +269,7 @@ style="-o-transition:.5s;
   top: 46px;
   left: 50%;
   margin-left: -4px;
-  transform-origin: 30% 106px;
+  transform-origin: 50% 110px;
 }
 
 .second-hand {
@@ -338,13 +338,7 @@ for (var i = 1; i < 60; i++) {
 
 function clock() {
   var weekday = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+        ""
       ],
       d = new Date(),
       h = d.getHours(),
