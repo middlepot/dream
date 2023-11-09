@@ -215,7 +215,7 @@ style="-o-transition:.5s;
 <a href="https://middlepot.com" target="_blank" style="text-decoration: none; border-bottom:1px solid #fff; padding-bottom: 0px;"><sup><font color="#fff" style="font-size:10px; letter-spacing:1px;">© middlepot</font></sup></a>
 </div>
 
-<img oncontextmenu="return false" onclick="audio1.play();" ndragstart="return false" style="position:absolute; left:0px; top:0px; z-index:20; display:block;" src="blank.png">
+<!--<img oncontextmenu="return false" onclick="audio1.play();" ndragstart="return false" style="position:absolute; left:0px; top:0px; z-index:20; display:block;" src="blank.png">-->
 
 <audio id="audio1" src="tic.mp3" type="audio/mpeg" autoplay loop></audio>
 
@@ -254,10 +254,10 @@ style="-o-transition:.5s;
   width: 20px;
   height: 88px;
   background-image: url(hour.png);
-  top: 79px;
-  left: 50%;
-  margin-left: -15px;
-  transform-origin: 50% 80px;
+  top: 55px;
+  left: 145px;
+  margin-left: -5px;
+  transform-origin: 50% 100%;
 }
 
 .minute-hand {
@@ -266,10 +266,10 @@ style="-o-transition:.5s;
   width: 17px;
   height: 124px;
   background-image: url(minute.png);
-  top: 46px;
-  left: 50%;
+  top: 25px;
+  left: 145px;
   margin-left: -5px;
-  transform-origin: 50% 110px;
+  transform-origin: 50% 100%;
 }
 
 .second-hand {
@@ -278,10 +278,10 @@ style="-o-transition:.5s;
   width: 8px;
   height: 124px;
   background-image: url(second.png);
-  top: 46px;
-  left: 50%;
-  margin-left: -4px;
-  transform-origin: 50% 105px;
+  top: 25px;
+  left: 150px;
+  margin-left: -5px;
+  transform-origin: 50% 100%;
 }
 
 .diallines {
@@ -367,8 +367,6 @@ function clock() {
   hEl.style.transform = "rotate("+hDeg+"deg)";
   mEl.style.transform = "rotate("+mDeg+"deg)";
   sEl.style.transform = "rotate("+sDeg+"deg)";
-  dateEl.innerHTML = date+"/"+month+"/"+year;
-  dayEl.innerHTML = day;
 }
 
 setInterval("clock()", 100);
