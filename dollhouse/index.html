@@ -120,14 +120,14 @@ html {
 }
 
 @supports not (-webkit-touch-callout: none) {
-@media screen and (max-width: 1000px) and (orientation: portrait){
+@media screen and (min-width: 1px) and (orientation: portrait){
 body { position: relative; zoom: 140%; left:-100px; top:30px; background-repeat: repeat;}
 marquee { width:190%; }
 }
 }
 
 @supports (-webkit-touch-callout: none) {
-@media screen and (max-width: 1000px) and (orientation: portrait){
+@media screen and (min-width: 1px) and (orientation: portrait){
 body { position: relative; zoom: 140%; left:-100px; top:30px; background-repeat: repeat;}
 html{-webkit-text-size-adjust: 135%; text-size-adjust: 135%;}
 marquee { width:190%; }
@@ -146,7 +146,7 @@ body { position: relative; zoom: 120%;
 marquee { width:140%; }
 }
 @media screen and (min-width: 2000px) and (orientation: landscape){
-body { position: relative; zoom: 100%;	left:-150px; background-repeat: repeat;}
+body { position: relative; zoom: 170%;	left:-150px; background-repeat: repeat;}
 marquee { width:120%; }
 }
 @media screen and (min-width: 3000px) and (orientation: landscape){
